@@ -37,7 +37,6 @@ mysql -e "CREATE USER IF NOT EXISTS '$SQL_USER'@'localhost' IDENTIFIED BY '$SQL_
            GRANT ALL PRIVILEGES ON *.* TO '$SQL_USER'@'localhost'; \
            CREATE DATABASE IF NOT EXISTS $SQL_DATABASE;" || exit_with_error "Failed to create SQL user and database."
 
-cd CFX-Server || exit_with_error "Failed to access CFX-Server directory."
 echo "Installation completed successfully."
 echo "To launch the server with TXADMIN, run the command './run.sh'."
 echo "To launch the server without TXADMIN, run the command './run.sh +exec server.cfg'."
